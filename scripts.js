@@ -1,13 +1,15 @@
+console.log("hello world")
 const container = document.querySelector("#container")
 
 function createDiv (num) {
-    for (let i = 0; i <num; i++ ) {
-        const content = document.createElement("div")
-        content.setAttribute("class", "content")
-        content.textContent("hello")
-        container.appendChild(content);
+    for (let i = 0; i < num; i++ ) {
+        const div = document.createElement("div");
+        div.classList.add("content"); 
+        container.appendChild(div);
         
     }
 }
 
-createDiv(30);
+createDiv(40);
+console.log("hello")
+
