@@ -10,6 +10,6 @@ function createDiv (num) {
     }
 }
 
-createDiv(40);
+createDiv(256);
 console.log("hello")
 

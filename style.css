@@ -1,18 +1,27 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 #container {
     display: flex;
     background-color: lightblue;
+    flex-wrap: wrap;
+    width:800px;
+    height:800px;
+    
     
     
     
 }
 .content {
    display: flex;
-    height:auto;
-    width:200px;
+   box-sizing: border-box;
+    height:50px;
+    width:50px;
     background-color: white;
-    border: 5px solid black;
-    padding:50px;
-    margin:20px;
-    flex-wrap: wrap;
-    
+    border: 1px solid black;
+    padding:0px;
+    margin:0px;
+  
 }
