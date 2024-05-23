@@ -1,4 +1,11 @@
+#container {
+    display: flex;
+    background-color: lightblue;
+    
+    
+}
 .content {
     display: flex;
     background-color: black;
+    min-width: 40px;
 }
