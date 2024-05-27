@@ -14,7 +14,7 @@ function createDiv (num) {
 }
 
 // function hover() {
-//     const hover = document.querySelectorAll("div")
+//     const hover = document.getElementById("div");
 //     hover.addEventListener("mouseover", () => {
 //         hover.classList.add("hover");
 //         div.appendChild(hover);
@@ -23,13 +23,12 @@ function createDiv (num) {
 
 
 createDiv(256);
-// hover();
 
 
 function newGrid (number) {
-
-    removeDiv();
     
+    removeDiv();
+
     divNum = squareNum(number)
     for (let i = 0; i < divNum; i++ ) {
         
@@ -52,4 +51,9 @@ function removeDiv () {
     while (oldDiv.firstChild) {
         oldDiv.removeChild(oldDiv.lastChild);
     }
+}
+
+function breakRow() {
+
+
 }
