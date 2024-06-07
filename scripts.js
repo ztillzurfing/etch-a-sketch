@@ -1,10 +1,17 @@
 console.log("hello world")
 const container = document.querySelector("#container")
+const containerLength = 1000;
 
 function createDiv (num) {
-    for (let i = 0; i < num; i++ ) {
+    
+    //div dimensions
+    const divLength = containerLength / num;
+
+    for (let i = 0; i < (num * num); i++ ) {
         const div = document.createElement("div");
         div.classList.add("content");
+        div.style.height = `${divLength}px`;
+        div.style.width = `${divLength}px`;
         div.addEventListener("mouseover", () =>{
             div.style.backgroundColor = "blue"
         })
@@ -13,16 +20,8 @@ function createDiv (num) {
     }
 }
 
-// function hover() {
-//     const hover = document.getElementById("div");
-//     hover.addEventListener("mouseover", () => {
-//         hover.classList.add("hover");
-//         div.appendChild(hover);
-//     })
-// }
 
-
-createDiv(256);
+createDiv(70);
 
 
 function newGrid (number) {
@@ -40,10 +39,6 @@ function newGrid (number) {
         container.appendChild(div);
         
     }
-}
-
-function squareNum(number) {
-    return number ** 2;
 }
 
 function removeDiv () {
