@@ -1,6 +1,6 @@
-console.log("hello world")
-const container = document.querySelector("#container")
+const container = document.querySelector("#container");
 const containerLength = 1000;
+
 
 function createDiv (num) {
     
@@ -21,24 +21,14 @@ function createDiv (num) {
 }
 
 
-createDiv(70);
+createDiv(20);
 
 
-function newGrid (number) {
+function newGrid (num) {
     
     removeDiv();
 
-    divNum = squareNum(number)
-    for (let i = 0; i < divNum; i++ ) {
-        
-        const div = document.createElement("div");
-        div.classList.add("content");
-        div.addEventListener("mouseover", () =>{
-            div.style.backgroundColor = "blue"
-        })
-        container.appendChild(div);
-        
-    }
+    createDiv(num);
 }
 
 function removeDiv () {
@@ -48,7 +38,16 @@ function removeDiv () {
     }
 }
 
-function breakRow() {
-
-
+function buttonGrid(num) {
+    let buttonNum = prompt("please input the number of cells.");
+    buttonNum.isInteger;
+    if (buttonNum <100) {
+        newGrid(buttonNum);
+    } else if (buttonNum > 100) {
+        alert("Try a number below 100")
+    } else {
+        alert("not a number")
+    }
 }
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", buttonGrid);
